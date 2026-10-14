@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Localization, UI/UX & Balance Report: Tenebris: Terra Incognita</title>
+  <style>
+    /* Reset & Theme Setup */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #333842; /* Medium Dark Metallic Grey */
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* Headings & Dividers */
+    h1, h2, h3, h4 {
+      color: #60a5fa;
+      border-bottom: 1px solid #4a5568;
+      padding-bottom: 0.3em;
+      margin-top: 1.5em;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 1.25em;
+      border-bottom: none;
+    }
+
+    /* Anchor Links for Top Navigation */
+    .back-to-top-link {
+      font-size: 0.75em;
+      margin-left: 10px;
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: normal;
+      transition: color 0.2s ease;
+    }
+    .back-to-top-link:hover {
+      color: #60a5fa;
+    }
+
+    /* Code & Formatting */
+    code, pre {
+      background-color: #21252b;
+      color: #f1f5f9;
+      border: 1px solid #3b4252;
+      border-radius: 6px;
+      padding: 2px 6px;
+      font-family: ui-monospace, SFMono-Regular, SF Pro Text, Menlo, Consolas, monospace;
+    }
+
+    /* Callouts */
+    .callout {
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 6px;
+      background-color: #282c34;
+      border: 1px solid #3e4451;
+      border-left-width: 4px;
+    }
+    .callout-title {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    /* Callout Variants */
+    .callout-note {
+      border-left-color: #3b82f6;
+    }
+    .callout-note .callout-title {
+      color: #60a5fa;
+    }
+
+    .callout-tip {
+      border-left-color: #22c55e;
+    }
+    .callout-tip .callout-title {
+      color: #4ade80;
+    }
+
+    .callout-warning {
+      border-left-color: #eab308;
+    }
+    .callout-warning .callout-title {
+      color: #fde047;
+    }
+
+    .callout-important {
+      border-left-color: #a855f7;
+    }
+    .callout-important .callout-title {
+      color: #c084fc;
+    }
+
+    /* Tables */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #4a5568;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background-color: #21252b;
+      color: #60a5fa;
+    }
+    tr:nth-child(even) {
+      background-color: #2c313a;
+    }
+
+    /* Links & Horizontal Rules */
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      background-color: #4a5568;
+      height: 1px;
+      border: 0;
+      margin: 30px 0;
+    }
+
+    /* Fixed Floating Back-To-Top Button */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      background-color: #21252b;
+      color: #e2e8f0;
+      border: 1px solid #4a5568;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
+    }
+    #topBtn:hover {
+      background-color: #3b4252;
+      color: #60a5fa;
+      border-color: #60a5fa;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <a href="#top" id="topBtn">▲ </a>
+
+  <h1>Comprehensive Localization, UI/UX & Balance Report: Tenebris: Terra Incognita</h1>
+
+  <div class="callout callout-note">
+    <div class="callout-title">ℹ DOCUMENT OVERVIEW & CONTEXT</div>
+    <p style="margin-bottom: 8px;">This report was compiled as part of an <strong>Academic and Professional Game Analysis Project</strong>. <em>Tenebris: Terra Incognita</em> was selected as the core subject due to a deep personal passion for the tactical strategy genre and an appreciation for the game's high potential.</p>
+    
+    <p style="margin-bottom: 4px;"><strong>Primary Objectives:</strong></p>
+    <ul style="margin-top: 4px; margin-bottom: 0; padding-left: 20px;">
+      <li><strong>Technical Localization Audit:</strong> Standardizing tooltip syntax, removing linguistic ambiguities, and unifying keyword conventions.</li>
+      <li><strong>UI/UX Evaluation:</strong> Enhancing action clarity, readability, and interface navigation during tactical combat.</li>
+      <li><strong>Systemic Balance Analysis:</strong> Addressing progression walls, combat scaling (Crit/DoTs), and Hardcore mode dynamics.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <h2 id="table-of-contents">Table of Contents <a href="#top" class="back-to-top-link">↑ </a></h2>
+  <ul>
+    <li><a href="#executive-summary">Executive Summary</a></li>
+    <li><a href="#1-general-syntax--ui-formatting-rules">1. General Syntax & UI Formatting Rules</a>
+      <ul>
+        <li><a href="#11-redundant-adverbs--typos-instantly--immediately">1.1 Redundant Adverbs & Typos ("instantly" / "immediately")</a></li>
+        <li><a href="#12-mathematical--punctuation-redundancy---increases">1.2 Mathematical & Punctuation Redundancy (+, %, Increases)</a></li>
+        <li><a href="#13-currency-terminology-standardization-credits-vs-honor">1.3 Currency Terminology Standardization ("Credits" vs. "Honor")</a></li>
+        <li><a href="#14-targeting--area-of-effect-aoe-terminology-standardization">1.4 Targeting & Area of Effect (AoE) Terminology Standardization</a></li>
+        <li><a href="#15-definite-article-redundancy-in-english-localization">1.5 Definite Article Redundancy in English Localization</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-combat-tooltips-keywords--ui-case-studies">2. Combat Tooltips, Keywords & UI Case Studies</a>
+      <ul>
+        <li><a href="#case-study-1-on-kill-triggers--system-keyword">Case Study #1: On-Kill Triggers & System Keyword</a></li>
+        <li><a href="#case-study-2-turn-phase-triggers">Case Study #2: Standardized Turn-Phase Prefixes</a></li>
+        <li><a href="#case-study-3-on-miss-mechanics--single-hit-precision">Case Study #3: On-Miss Mechanics & Single Hit Precision</a></li>
+        <li><a href="#case-study-4-disjunctive-triggers--structural-prefix">Case Study #4: Disjunctive Triggers & Structural Prefix</a></li>
+        <li><a href="#case-study-5-terminology-ambiguity">Case Study #5: Inconsistent Initiative Reduction Terminology</a></li>
+        <li><a href="#case-study-6-conditional-syntax--punctuation">Case Study #6: Conditional Syntax & Punctuation</a></li>
+        <li><a href="#case-study-7-line-breaks--broken-sentence-syntax">Case Study #7: Line Breaks & Broken Sentence Syntax</a></li>
+        <li><a href="#case-study-8-debuff-stacking--conditional-triggers">Case Study #8: Redundant Resistance Listings & Hyperlink Scope</a></li>
+        <li><a href="#case-study-9-ui-formatting--layout-breaks">Case Study #9: Multi-Debuff Scaling & UI Container Layouts</a></li>
+        <li><a href="#case-study-10-inconsistent-keyword-provocation-vs-taunt">Case Study #10: Status Effect Synonym Conflicts (Provocation vs. Taunt)</a></li>
+        <li><a href="#case-study-11-action-economy-phrasing-inconsistencies">Case Study #11: Action Economy Phrasing Inconsistencies</a></li>
+        <li><a href="#case-study-12-semantic-overuse-of-the-verb-burn">Case Study #12: Semantic Overuse of the Verb "Burn"</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-gameplay-systems-localization--ui-ux-enhancements">3. Gameplay Systems & UI/UX Enhancements</a>
+      <ul>
+        <li><a href="#31-gameplay--difficulty-balancing">3.1 Gameplay & Difficulty Balancing</a></li>
+        <li><a href="#32-equipment--item-system-rules">3.2 Equipment & Item System Rules</a></li>
+        <li><a href="#33-interface--system-enhancements-ui-ux">3.3 Interface & System Enhancements (UI/UX)</a></li>
+      </ul>
+    </li>
+    <li><a href="#community-qol-spotlight--reference-mod">Community QoL Spotlight & Reference Mod</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="executive-summary">Executive Summary <a href="#top" class="back-to-top-link">↑ </a></h2>
+  <p>Clear and precise UI descriptions prevent unnecessary cognitive friction during tactical decision-making. While <em>Tenebris: Terra Incognita</em> features a remarkably deep and engaging combat engine, systemic inconsistencies in localization, UI syntax, and endgame progression currently obscure its full potential.</p>
+
+  <p>This report presents a structured analysis and actionable framework focused on three core pillars:</p>
+  <ul>
+    <li><strong>Technical Localization & UI Syntax:</strong> Standardizing tooltip terminology (e.g., unifying <em>Provocation</em> vs. <em>Taunt</em>, establishing <em>Killing Blow</em>), stripping redundant adverbs/operators, and removing syntactic ambiguity to streamline combat readability.</li>
+    <li><strong>Systemic Gameplay & Meta Balance:</strong> Addressing midgame progression walls via HQ mission capping, smoothing Hardcore mode reinforcement mechanics, capping uncapped Critical Damage, and introducing targeted DoT detonation mechanics for classes lacking immediate direct burst.</li>
+    <li><strong>Equipment & Interface Quality-of-Life:</strong> Curating random loot generation to eliminate "dead stats", aligning item headers with class lore, and proposing essential UX additions such as UI scaling, keyboard shortcuts, and replayable endgame structures.</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="1-general-syntax--ui-formatting-rules">1. General Syntax & UI Formatting Rules <a href="#top" class="back-to-top-link">↑ </a></h2>
+
+  <h3 id="11-redundant-adverbs--typos-instantly--immediately">1.1 Redundant Adverbs & Typos ("instantly" / "immediately")</h3>
+  <p>Many passive and buff descriptions currently rely on filler adverbs like "instantly" or "immediately" (along with minor localization typos such as "immidiately"). In a turn-based tactical system, mechanical status updates and stat modifications are instant by default.</p>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 TIP</div>
+    <strong>Rule:</strong> Strip out all instances of <font color="#FF3D00">"instantly"</font>, <font color="#FF3D00">"immediately"</font>, and their typos across all tooltips.
+  </div>
+
+  <h3 id="12-mathematical--punctuation-redundancy---increases">1.2 Mathematical & Punctuation Redundancy (+, %, Increases)</h3>
+  <p>Tooltips frequently mix plain language verbs with explicit mathematical operators:</p>
+  <ul>
+    <li><strong>Redundant Symbols:</strong> Combining verb indicators with operators (e.g., <em>"Increases duration by <font color="#FF3D00">+1</font> raid"</em>).</li>
+    <li><strong>Double Percent Symbols:</strong> Appending <code>%</code> to both the stat name and value (e.g., <em>"Increases Crit. Damage <font color="#FF3D00">%</font> by +10<font color="#FF3D00">%</font>"</em>).</li>
+  </ul>
+
+  <div class="callout callout-important">
+    <div class="callout-title">📌 IMPORTANT</div>
+    <strong>Standardization Rules:</strong><br>
+    1. When using verbs like <em>Increases</em> or <i>Reduces</i>, omit the <code>+</code> and <code>-</code> operators.<br>
+    2. <strong>Primary Standard (Option A - Recommended):</strong> <i>Stat Name + % Value</i> (e.g., <font color="#00E676">"Increases Bonus Exp by 25%."</font>).<br>
+    3. <strong>Secondary Standard (Option B - Compact):</strong> <i>Stat % Keyword + Integer Value</i> (e.g., <font color="#00E676">"Increases Bonus Exp% by 25."</font>).
+  </div>
+
+  <h4>Conversion Examples:</h4>
+  <ul>
+    <li><strong>Battle Tested (Buff Tooltip):</strong>
+      <ul>
+        <li><font color="#FF3D00"><strong>Current:</strong></font> "Increases Crit. Damage % by +10%."</li>
+        <li><font color="#00E676"><strong>Proposed (Option A):</strong></font> Increases Crit Damage by 10%.</li>
+        <li><font color="#00E676"><strong>Proposed (Option B):</strong></font> Increases Crit Damage% by 10.</li>
+      </ul>
+    </li>
+    <li><strong>Portable Injector (Item Tooltip):</strong>
+      <ul>
+        <li><font color="#FF3D00"><strong>Current:</strong></font> "Increases the duration of stimulants from the Medbay by +1 raid."</li>
+        <li><font color="#00E676"><strong>Proposed:</strong></font> Increases Medbay stimulant duration by 1 raid.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3 id="13-currency-terminology-standardization-credits-vs-honor">1.3 Currency Terminology Standardization ("Credits" vs. "Honor")</h3>
+  <p>Several perk tooltips (e.g., <em>Archaeologist</em> referencing <em>"finding more credits"</em>) and narrative dialogues occasionally refer to in-game currency as "credits". However, the actual transactional currency utilized throughout the game's economy is named <em>Honor</em>, featuring an icon and framework completely detached from credit-based terminology.</p>
+
+  <div class="callout callout-warning">
+    <div class="callout-title">⚠ TERMINOLOGY RULE</div>
+    Audit and standardize all instances of "credits" across tooltips, item descriptions, and localization strings, replacing them with <em>Honor</em> to prevent confusion with the actual in-game economy.
+  </div>
+
+  <h3 id="14-targeting--area-of-effect-aoe-terminology-standardization">1.4 Targeting & Area of Effect (AoE) Terminology Standardization</h3>
+  <p>We strongly recommend a sweeping cleanup and normalization of targeting and area-of-effect phrasing across all skill descriptions. Spatial definitions frequently suffer from disarray, occasionally showing direct contradictions between body text and formal area tags (e.g., skills describing row-wide impacts while displaying column tags). Unifying these spatial definitions and clarifying single-target freedoms (such as <em>Any Target</em> vs. <em>Frontline Target</em>) will eliminate grid-based confusion.</p>
+
+  <h3 id="15-definite-article-redundancy-in-english-localization">1.5 Definite Article Redundancy in English Localization</h3>
+  <p><strong>Rationale:</strong> The English localization frequently appends unnecessary definite articles before status effect names, mechanical keywords, and passive traits (e.g., writing <em>"the Nano Plague effect"</em>, <em>"the Shock"</em>, or <em>"the Battle Tested"</em>). In tactical UI writing, status keywords function as proper nouns or established status states and read much cleaner without preceding articles like "the".</p>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 GRAMMAR & LOCALIZATION RULE</div>
+    Strip out unnecessary definite articles (<em>"the"</em>) preceding status effects, status categories, and systemic keywords across English localization strings.
+  </div>
+
+  <h4>Examples:</h4>
+  <ul>
+    <li><font color="#FF3D00"><strong>Current:</strong></font> "When attacking a target affected by <em>the</em> Nano Plague effect..."</li>
+    <li><font color="#00E676"><strong>Proposed:</strong></font> "When attacking a target affected by Nano Plague..."</li>
+    <li style="margin-top: 8px;"><font color="#FF3D00"><strong>Current:</strong></font> "Applies <em>the</em> Shock effect to the target."</li>
+    <li><font color="#00E676"><strong>Proposed:</strong></font> "Applies Shock to the target."</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="2-combat-tooltips-keywords--ui-case-studies">2. Combat Tooltips, Keywords & UI Case Studies <a href="#top" class="back-to-top-link">↑ </a></h2>
+
+  <!-- Case Study #1 -->
+  <h3 id="case-study-1-on-kill-triggers--system-keyword">Case Study #1: On-Kill Triggers & System Keyword Integration</h3>
+  <p>Currently, the game uses disparate phrasing for defeating targets (e.g., <em>"finishing blow"</em>, <em>"finishing off a target"</em>, or <em>"for each kill"</em>). Standardizing these under a unified keyword removes mechanical ambiguity regarding whether DoT effects or indirect status kills qualify.</p>
+
+  <div class="callout callout-note">
+    <div class="callout-title">ℹ SYSTEM KEYWORD IMPLEMENTATION</div>
+    <strong>Recommendation:</strong> Formalize a dedicated system keyword—<font color="#00E5FF"><strong>Killing Blow</strong></font>—leveraging in-game hover tooltips.<br>
+    <strong>Hover Tooltip Definition:</strong> <i>Triggered exclusively when a hero defeats an enemy using direct damage (excludes damage-over-time effects like Poison, Bleed, or Acid).</i>
+  </div>
+
+  <h4>Conversions:</h4>
+  <ul>
+    <li><strong>Special Training 2:</strong>
+      <ul>
+        <li><font color="#FF3D00"><strong>Current:</strong></font> "For each finishing blow applies the Battle tested x5 effect on self. The effect is cumulative."</li>
+        <li><font color="#00E676"><strong>Proposed:</strong></font> <font color="#00E5FF"><strong>Killing Blow:</strong></font> Grants Battle Tested (x5). (Stacks)</li>
+      </ul>
+    </li>
+    <li><strong>Special Training III:</strong>
+      <ul>
+        <li><font color="#FF3D00"><strong>Current:</strong></font> "When finishing off a target with direct damage: Gains an action point."</li>
+        <li><font color="#00E676"><strong>Proposed:</strong></font> <font color="#00E5FF"><strong>Killing Blow:</strong></font> Action does not end.</li>
+      </ul>
+    </li>
+    <li><strong>Battle Wolf:</strong>
+      <ul>
+        <li><font color="#FF3D00"><strong>Current:</strong></font> "For each kill, grants the hero Unity x5."</li>
+        <li><font color="#00E676"><strong>Proposed:</strong></font> <font color="#00E5FF"><strong>Killing Blow:</strong></font> Grants Unity (x5).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Case Study #2 -->
+  <h3 id="case-study-2-turn-phase-triggers">Case Study #2: Standardized Turn-Phase Prefixes</h3>
+  <p><strong>Rationale:</strong> Establishing strict structural prefixes ensures players immediately recognize phase-based passive activations across skill trees.</p>
+
+  <div class="callout callout-important">
+    <div class="callout-title">📌 STANDARDIZATION RULE</div>
+    Standardize all phase-based conditional triggers to the exact prefixes <font color="#00E5FF"><strong>"At start of turn:"</strong></font> and <font color="#00E5FF"><strong>"At end of turn:"</strong></font> followed by a colon.
+  </div>
+
+  <h4>Conversions:</h4>
+  <ul>
+    <li><strong>Start-of-Turn Trigger:</strong>
+      <ul>
+        <li><font color="#FF3D00"><strong>Current:</strong></font> "When turn starts, restores 10 Health to the hero."</li>
+        <li><font color="#00E676"><strong>Proposed:</strong></font> <font color="#00E5FF"><strong>At start of turn:</strong></font> Restores 10 Health.</li>
+      </ul>
+    </li>
+    <li><strong>End-of-Turn Trigger:</strong>
+      <ul>
+        <li><font color="#FF3D00"><strong>Current:</strong></font> "On turn end as a 15% chance to apply Fatigue x1 effect."</li>
+        <li><font color="#00E676"><strong>Proposed:</strong></font> <font color="#00E5FF"><strong>At end of turn:</strong></font> 15% chance to apply Fatigue (x1).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Case Study #3 -->
+  <h3 id="case-study-3-on-miss-mechanics--single-hit-precision">Case Study #3: On-Miss Mechanics & Reset Conditions</h3>
+  <p><strong>Rationale:</strong> Removing redundant adverbs like "instantly" and consolidating trigger/reset conditions makes stacking passives easier to parse during combat.</p>
+  <ul>
+    <li><font color="#FF3D00"><strong>Current:</strong></font> "Each miss instantly increases the hero's Accuracy by 15% until a successful hit. Stacks up to 5 times."</li>
+    <li><font color="#00E676"><strong>Proposed:</strong></font> Missing a hit increases Accuracy by 15%. Stacks up to 5 times, resets on hit.</li>
+  </ul>
+
+  <!-- Case Study #4 -->
+  <h3 id="case-study-4-disjunctive-triggers--structural-prefix">Case Study #4: Disjunctive Triggers & Consolidated Syntax</h3>
+  <p><strong>Rationale:</strong> Combining multi-choice triggers under a single structural clause saves tooltip space and flows better visually.</p>
+  <ul>
+    <li><font color="#FF3D00"><strong>Current:</strong></font> At the end of the turn as a 15% chance to apply Fatigue x1 effect. OR At the end of the turn as a 15% chance to apply Bionanobots x1 effect.</li>
+    <li><font color="#00E676"><strong>Proposed:</strong></font> At end of turn: 15% chance to apply Fatigue (x1) or Bionanobots (x1).</li>
+  </ul>
+
+  <!-- Case Study #5 -->
+  <h3 id="case-study-5-terminology-ambiguity">Case Study #5: Inconsistent Initiative Reduction Terminology</h3>
+  <p>Across character skill trees, turn-manipulation mechanics exhibit fragmented phrasing (e.g., <em>"Increases Initiative damage"</em> vs. <em>"Deals Initiative damage at X%"</em>). Since these function identically to standard initiative reductions, unifying them under <em>"Reduces target Initiative by X% per hit"</em> clarifies multi-strike skill behavior.</p>
+
+  <h4>Conversion Examples:</h4>
+  <ul>
+    <li><strong>Bloody Job:</strong><br>
+      <font color="#FF3D00"><strong>Current:</strong></font> "Applies Bleeding x1 effect. Increases Initiative damage by 5%."<br>
+      <font color="#00E676"><strong>Proposed:</strong></font> Applies Bleeding (x1). Reduces target Initiative by 5% per hit.
+    </li>
+    <li style="margin-top: 10px;"><strong>Total Disinfection:</strong><br>
+      <font color="#FF3D00"><strong>Current:</strong></font> "When attacking a target affected by the Nano Plague effect: Deals Initiative damage at 50%."<br>
+      <font color="#00E676"><strong>Proposed:</strong></font> When attacking a target affected by Nano Plague: Reduces target Initiative by 50% per hit.
+    </li>
+  </ul>
+
+  <!-- Case Study #6 -->
+  <h3 id="case-study-6-conditional-syntax--punctuation">Case Study #6: Conditional Punctuation & Trigger Headers</h3>
+  <p><strong>Rationale:</strong> Replacing informal hyphens with colons establishes a clean visual hierarchy between conditions and effects.</p>
+  <ul>
+    <li><font color="#FF3D00"><strong>Current (Taking the Initiative):</strong></font> "When Ambushed - increases Initiative by 125%."</li>
+    <li><font color="#00E676"><strong>Proposed:</strong></font> When Ambushed: Increases Initiative by 125%.</li>
+  </ul>
+
+  <!-- Case Study #7 -->
+  <h3 id="case-study-7-line-breaks--broken-sentence-syntax">Case Study #7: Structural Line-Wrapping & Split Quantifiers</h3>
+  <p><strong>Rationale:</strong> Multi-line condition texts occasionally wrap awkwardly across UI containers. Formatting multi-tier scaling into nested lists prevents broken layout lines.</p>
+
+  <h4>Conversion Example:</h4>
+  <ul>
+    <li><strong>Special Training III (Lautus Specialization):</strong><br>
+      <font color="#FF3D00"><strong>Current (Broken Line-Wrap):</strong></font><br>
+      <i>"At the start of the turn, restores health to the hero by<br>
+      For each Toxin on enemies +4.<br>
+      For each Nano Plague on enemies,<br>
+      +30."</i><br><br>
+      <font color="#00E676"><strong>Proposed Format:</strong></font> <font color="#00E5FF"><strong>At start of turn:</strong></font> Restores Health based on active enemy debuffs:
+      <ul>
+        <li><strong>Toxin:</strong> +4 Health per stack.</li>
+        <li><strong>Nano Plague:</strong> +30 Health per stack.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Case Study #8 -->
+  <h3 id="case-study-8-debuff-stacking--conditional-triggers">Case Study #8: Redundant Resistance Listings & Hyperlink Scope</h3>
+  <p><strong>Rationale:</strong> Multi-line resistance buffs repeat "Increases [Stat] Resistance by +100%" across separate lines. Grouping these resistances into a single consolidated clause (matching the character sheet order: <em>Paralysis, Fear, Knockdown, Stun</em>) streamlines tooltip card size.</p>
+
+  <h4>Conversion Examples:</h4>
+  <ul>
+    <li><strong>Pressure Compensator:</strong><br>
+      <font color="#FF3D00"><strong>Current:</strong></font> Increases Fear Resistance by +100%... (4 separate lines)<br>
+      <font color="#00E676"><strong>Proposed:</strong></font> Increases <u>Paralysis</u>, <u>Fear</u>, <u>Knockdown</u>, and <u>Stun</u> Resistance by 100%.
+    </li>
+  </ul>
+
+  <!-- Case Study #9 -->
+  <h3 id="case-study-9-ui-formatting--layout-breaks">Case Study #9: Multi-Debuff Scaling & UI Container Layouts</h3>
+  <p><strong>Rationale:</strong> Formatting multi-debuff efficiency scaling into structured sub-lists avoids text clipping inside tooltip cards.</p>
+
+  <h4>Conversion Example:</h4>
+  <ul>
+    <li><strong>Test Subject (Lautus Specialization):</strong><br>
+      <font color="#FF3D00"><strong>Current (Inline Overflow):</strong></font> "Reduces initiative: For each Poison on a target, 1%..."<br>
+      <font color="#00E676"><strong>Proposed Format:</strong></font> Reduces target Initiative based on active status effects:
+      <ul>
+        <li><strong>Poison:</strong> -1% Initiative per stack.</li>
+        <li><strong>Toxin:</strong> -10% Initiative per stack.</li>
+        <li><strong>Nano Plague:</strong> -75% Initiative per stack and applies Fear (x1).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Case Study #10 -->
+  <h3 id="case-study-10-inconsistent-keyword-provocation-vs-taunt">Case Study #10: Status Effect Synonym Conflicts (Provocation vs. Taunt)</h3>
+  <p><strong>Rationale:</strong> The aggro-redirect effect is established as <em>Provocation</em> throughout most of the game, matching both the active debuff icon and hover hyperlink. However, specific skills (such as <em>High Explosive Drive</em> and <em>Heavy Shotgun</em>) refer to it as <em>"Taunt"</em>. Aligning these isolated instances under <em>Provocation</em> ensures consistency.</p>
+
+  <div class="callout callout-warning">
+    <div class="callout-title">⚠ TERMINOLOGY UNIFICATION RULE</div>
+    Standardize all occurrences, skill descriptions, and tooltips strictly to <font color="#00E5FF"><strong>Provocation</strong></font> across the entire game.
+  </div>
+
+  <h4>Conversion Examples:</h4>
+  <ul>
+    <li><strong>High Explosive Drive:</strong><br>
+      <font color="#FF3D00"><strong>Current:</strong></font> "Grants a 20% chance to apply the Stun x1 effect. If the target has the Taunt effect, applies the Stun x1 effect."<br>
+      <font color="#00E676"><strong>Proposed:</strong></font> 20% chance to apply Stun (x1). If the target has <font color="#00E5FF"><strong>Provocation</strong></font>, applies Stun (x1).
+    </li>
+    <li style="margin-top: 10px;"><strong>Heavy Shotgun:</strong><br>
+      <font color="#FF3D00"><strong>Current:</strong></font> "If the target has the Taunt effect: Increases Crit. Chance % by 100%."<br>
+      <font color="#00E676"><strong>Proposed:</strong></font> If the target has <font color="#00E5FF"><strong>Provocation</strong></font>: Increases Crit Chance by 100%.
+    </li>
+  </ul>
+
+  <!-- Case Study #11 -->
+  <h3 id="case-study-11-action-economy-phrasing-inconsistencies">Case Study #11: Action Economy Phrasing Inconsistencies</h3>
+  <p><strong>Rationale:</strong> Unifying extra-action triggers under standard phrasing improves tactical clarity across different class trees.</p>
+
+  <div class="callout callout-important">
+    <div class="callout-title">📌 ACTION ECONOMY RULE</div>
+    Unify extra-action grants under a consistent standard (e.g., <font color="#00E5FF"><strong>"Grants an extra action (Once per round)."</strong></font> or <font color="#00E5FF"><strong>"Action does not end."</strong></font>).
+  </div>
+
+  <!-- Case Study #12 -->
+  <h3 id="case-study-12-semantic-overuse-of-the-verb-burn">Case Study #12: Semantic Overuse of the Verb "Burn"</h3>
+  <p><strong>Rationale:</strong> Using <em>"Burn"</em> for initiative draining or stack removal causes semantic confusion with the actual <em>Burning</em> DoT status effect. Reserving "Burn" exclusively for damage-over-time interactions and using <em>Drain</em> or <em>Consume</em> for resource manipulation clarifies skill behavior.</p>
+
+  <hr>
+
+  <h2 id="3-gameplay-systems-localization--ui-ux-enhancements">3. Gameplay Systems & UI/UX Enhancements <a href="#top" class="back-to-top-link">↑ </a></h2>
+
+  <!-- 3.1 Gameplay & Difficulty Balancing -->
+  <h3 id="31-gameplay--difficulty-balancing">3.1 Gameplay & Difficulty Balancing</h3>
+  <ul>
+    <li><strong>Experience Curve Breakdown & The Midgame Grind Wall:</strong> 
+      <p>The campaign starts with a smooth, highly rewarding rhythm, but hits a jarring midgame wall where natural progression grinds to a painful halt. To keep pace, the game heavily pushes players toward passive leveling via <strong>HQ missions</strong>. However, because HQ mission brackets scale dynamically based on the active level spread of your entire roster (spanning wildly from a lowly level 4 recruit up to a level 22 veteran all at once), players are funneled into a bizarre loop. You find yourself repeatedly running trivial, mind-numbing low-tier assignments—such as grinding the baseline level 1 mission over and over—just to passively power-level backup characters.</p>
+      <div class="callout callout-warning" style="margin-top: 8px;">
+        <div class="callout-title">💡 PROGRESSION & HQ RESTRUCTURING</div>
+        HQ missions should be intelligently capped relative to the highest-tier unlocked campaign mission (e.g., if your peak campaign milestone is level 4, HQ offers should not exceed level 4). While this structural cap alone won't completely solve the occasional wild spikes in recommended campaign difficulty, it stops total progression breakage. Furthermore, playtesting with a modest <strong>+20% global Experience boost</strong> proved to be an absolute game-changer: it smooths out the rough edges of the leveling curve naturally, keeping you right on track without ever feeling overpowered or trivializing the core tactical challenge.
+      </div>
+    </li>
+    
+    <li style="margin-top: 12px;"><strong>Hardcore Permanent Death & Reinforcement Pressure:</strong> 
+      <p>Playing in <strong>Hardcore mode</strong> is a tense, high-stakes experience, but it suffers from a punishing design collision. When a treasured squad member falls in combat, they are gone forever—there is no safety net, no recovery buffer, and no <em>"Death's Door"</em> mechanic (à la <em>Darkest Dungeon</em>) to offer a dramatic last-second reprieve. Compounding this permanent loss, the reinforcement system in Hardcore can feel brutally unfair: the exact moment you finally manage to put down a dangerous enemy, a fresh high-stat reinforcement instantly pops into existence and is allowed to act immediately on that very same turn, often wiping out a wounded operator before you even have a chance to react.</p>
+      <div class="callout callout-warning" style="margin-top: 8px;">
+        <div class="callout-title">⚠ HARDCORE COMBAT TWEAK</div>
+        Introducing a 1-turn <strong>Summoning Sickness</strong> or automatically placing newly spawned reinforcements at the absolute tail-end of the Initiative Order would restore tactical fairness, giving players a fighting chance to reposition and adapt.
+      </div>
+    </li>
+
+    <li style="margin-top: 12px;"><strong>Armor Bypass vs. Tactical Armor Shredding:</strong> 
+      <p>Certain skills that completely ignore enemy Armor warp the combat meta entirely. In the early game, they let players completely bypass core tactical layers; by late game, they allow you to completely bypass heavyweight boss stats, making armor-mitigation systems, positioning, and synergy-heavy shredding setups feel obsolete.</p>
+      <div class="callout callout-tip" style="margin-top: 8px;">
+        <div class="callout-title">💡 BALANCING SUGGESTION</div>
+        Relegate total armor bypass to just one or two iconic signature tools (such as the <em>Pellentes</em>'s <em>Bursting Bullet</em>) and instead lean heavily into expanding <strong>Armor Shredding / Armor Damage</strong>—supercharging the tactical armor-chipping mechanics that are already partially seeded in the game's existing toolset.
+      </div>
+    </li>
+
+    <li style="margin-top: 12px;"><strong>Uncapped Critical Damage Scaling & DoT Devaluation:</strong> 
+      <p>Critical Damage currently suffers from uncapped, infinite scaling, allowing optimized builds to skyrocket past <strong>1000% Critical Damage</strong>. This creates an unbridgeable chasm in the DPS meta:</p>
+      <ul>
+        <li><strong>Build Monoculture:</strong> Direct crit-stacking builds completely overshadow all alternative playstyles, forcing players into a narrow meta where flat Damage, Crit Chance, and Crit Multipliers are mandatory.</li>
+        <li><strong>Damage-Over-Time (DoT) Devaluation:</strong> Status-based playstyles (Bleed, Poison, Acid, Burning) are left completely obsolete. Because DoTs tick exclusively at the end of an enemy's turn and lack critical scaling, even conditional incentives like <em>"+Bonus Damage vs. Bleeding"</em> cannot compete with the blistering burst of hyper-stacked Crit multipliers. Furthermore, the game currently lacks reliable DoT detonation or burst conversion mechanics for status-heavy archetypes that struggle with immediate direct damage.</li>
+      </ul>
+      <div class="callout callout-tip" style="margin-top: 8px;">
+        <div class="callout-title">💡 BUILD DIVERSITY RECOMMENDATIONS</div>
+        <strong>Proposed Fixes:</strong>
+        <ul style="margin-top: 6px; padding-left: 18px;">
+          <li><strong>Critical Damage Cap:</strong> Implement a structural ceiling/cap on <strong>Critical Damage %</strong> to rein in the runaway direct-damage meta.</li>
+          <li><strong>Targeted DoT Detonation Mechanics:</strong> Introduce dedicated DoT detonation or stack-threshold burst mechanics (e.g., instant damage triggers or localized AoE splash upon reaching stack caps, without consuming stacks) specifically for DoT-reliant classes like <strong>Lautus</strong>, <strong>Phoenix</strong>, and <strong>Berserker</strong> to improve their immediate damage output.</li>
+        </ul>
+      </div>
+    </li>
+
+    <li style="margin-top: 12px;"><strong>Class-Locked Field Actions & Roster Progression Walls:</strong> 
+      <p>Exploration and map interaction feature unique <em>"field actions"</em>—such as forcing open blocked pathways or reviving fallen soldiers. However, these interactive opportunities are locked almost exclusively inside specific, non-repeatable main story missions. If you run a mission without a specific class in your active squad, you permanently miss the chance to trigger those field interactions and unlock the tied passive traits for those neglected characters. Adding repeatable field nodes or flexible squad requirements would prevent these permanent build-locking frustrations.</p>
+    </li>
+
+    <li style="margin-top: 12px;"><strong>Endgame Content Deserts & Procedural Potential:</strong> 
+      <p>Once players push through the campaign, the endgame opens up into a vast vacuum—aside from the final dungeon (which doesn't offer a punishing enough tactical payoff), there is practically nothing left to sink your teeth into. It's a real missed opportunity because Tenebris boasts gorgeous, highly atmospheric background art and a deeply satisfying combat engine. Introducing an extended, replayable endgame mode—such as an endless <strong>100-floor procedural megadungeon</strong> that dynamically stitches together the game's underutilized environmental backgrounds—would give fully optimized squads a brilliant reason to keep playing for hundreds of hours.</p>
+    </li>
+  </ul>
+
+  <!-- 3.2 Equipment & Item System Rules -->
+  <h3 id="32-equipment--item-system-rules">3.2 Equipment & Item System Rules</h3>
+  <ul>
+    <li><strong>Archetype Equipment Naming Alignment:</strong> 
+      <p>Nothing breaks immersion quite like interface dissonance. When a Mech class talent tree explicitly teaches you to upgrade <em>"the outer hull,"</em> but the item card header in your inventory stubbornly reads <em>"HEAVY ARMOR,"</em> it forces unnecessary mental gymnastics. Aligning Mech item headers directly to <strong>OUTER HULL</strong> creates seamless continuity between skill text and gear management.</p>
+    </li>
+    
+    <li style="margin-top: 10px;"><strong>Dead Stats & Class-Specific Loot Curation:</strong> 
+      <p>Random loot tables are currently plagued by frustrating dead-stat combinations that violate class logic. Mech heavy armor frequently rolls <em>Bio-nanobots</em> (despite Mechs having zero bio-tech integration), Engineer support drones roll useless <em>Bleed</em> modifiers, and general Implants generate wildly conflicting lines (like mixing <em>Panacea</em>, <em>Bleed</em>, and <em>Acid</em> together). Restricting random generation strictly to class-legal attribute pools will make gear hunting feel rewarding rather than punishing.</p>
+    </li>
+
+    <li style="margin-top: 10px;"><strong>Health Stat Distribution Flaws:</strong> 
+      <p>Right now, the coveted <em>Health</em> attribute rolls almost exclusively on Heavy Armor—the exact gear type worn by heavy-duty classes who already boast massive native health pools. Conversely, Light and Medium Armor classes, who desperately need survival scaling to stay viable on the frontlines, are completely starved of Health rolls on their gear tables.</p>
+    </li>
+
+    <li style="margin-top: 10px;"><strong>Stat Cap Visibility & Inventory Sorting:</strong> 
+      <p>The game keeps its maximum stat caps entirely hidden from the player (with Critical Chance at 10% being the sole exception discovered through heavy trial and error). Implementing dynamic color coding—such as turning a stat string into a <font color="#FFB300">distinct highlight color</font> the moment it hits its maximum ceiling—would be an immense UI quality-of-life win. Furthermore, standardizing secondary stat lines on equipment cards to mirror the order of the character's <strong>Details / Resistance</strong> panel will make gear comparison snappy and intuitive.</p>
+    </li>
+  </ul>
+
+  <!-- 3.3 Interface & System Enhancements (UI/UX) -->
+  <h3 id="33-interface--system-enhancements-ui-ux">3.3 Interface & System Enhancements (UI/UX)</h3>
+  <ul>
+    <li><strong>Pass Turn / End Turn Shortcut:</strong> Assigning a default remappable keybind (e.g., <code>F</code>) for <strong>Pass Turn / End Turn</strong> during combat would eliminate repetitive mouse travel across lengthy turn cycles.</li>
+    <li style="margin-top: 12px;"><strong>In-Game Codex & Glossary Tab:</strong> Adding a searchable Codex/Glossary to the pause menu allows players to quickly look up status definitions, damage types, and combat keywords during play.</li>
+    <li style="margin-top: 12px;"><strong>Quickbar Keybind Display Sync:</strong> Ensuring quickbar UI labels dynamically update when action slot hotkeys are remapped in the settings menu resolves static keybind label bugs.</li>
+    <li style="margin-top: 12px;"><strong>Global UI Scaling & Accessibility:</strong> Adding a global <strong>UI Scale Slider</strong> in the options menu will greatly improve readability for perk icons, Data Center upgrade cards, and small text across high-resolution displays.</li>
+    <li style="margin-top: 12px;"><strong>Status Indicator Color-Coding:</strong> Standardizing status indicators—using <font color="#00E676">Green/Blue</font> for positive Buffs and <font color="#FF3D00">Red/Orange</font> for Debuffs—will make target status evaluation at a glance seamless.</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="community-qol-spotlight--reference-mod">Community QoL Spotlight & Reference Mod <a href="#top" class="back-to-top-link">↑ </a></h2>
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 REFERENCE MOD</div>
+    <strong>Reference Mod:</strong> <a href="https://www.nexusmods.com/tenebristerraincognita/mods/1" target="_blank"><em>QoL - Tenebris + Framework</em></a> by <strong>brakbama</strong> (Nexus Mods)
+  </div>
+
+  <p>We recommend taking a look at the <em>QoL - Tenebris</em> project by community member brakbama. While community mods are naturally work-in-progress solutions, this project introduces several thoughtful interface ideas that align closely with the UI/UX enhancements discussed in this report:</p>
+
+  <ol>
+    <li><strong>Dynamic Hotbar Tooltip Aggregation:</strong> Hotbar tooltips aggregate active passive/gear multipliers, making total output calculation straightforward.</li>
+    <li><strong>Passive Amplifier Mini-Tooltips:</strong> Side-by-side mini-tooltips highlight passives currently modifying an active skill.</li>
+    <li><strong>Class Restriction Ring Indicators:</strong> Skills locked by subsequent class paths display a visual indicator, helping players plan build paths.</li>
+    <li><strong>Inventory Rendering Optimization:</strong> Off-screen UI cell culling provides smooth scrolling through large equipment inventories.</li>
+  </ol>
+
+</body>
+</html>
